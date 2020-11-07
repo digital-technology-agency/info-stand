@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "angular-electron-simple-app": {
+    "info-stand": {
       "root": "",
       "sourceRoot": "src",
       "projectType": "application",
@@ -11,6 +11,12 @@
         "build": {
           "builder": "@angular-builders/custom-webpack:browser",
           "options": {
+            "allowedCommonJsDependencies": [
+              "qrcode",
+              "speakeasy",
+              "electron-updater",
+              "child_process"
+            ],
             "outputPath": "dist",
             "index": "src/index.html",
             "main": "src/main.ts",
@@ -84,24 +90,24 @@
         "serve": {
           "builder": "@angular-builders/custom-webpack:dev-server",
           "options": {
-            "browserTarget": "angular-electron-simple-app:build"
+            "browserTarget": "info-stand:build"
           },
           "configurations": {
             "dev": {
-              "browserTarget": "angular-electron-simple-app:build:dev"
+              "browserTarget": "info-stand:build:dev"
             },
             "web": {
-              "browserTarget": "angular-electron-simple-app:build:web"
+              "browserTarget": "info-stand:build:web"
             },
             "production": {
-              "browserTarget": "angular-electron-simple-app:build:production"
+              "browserTarget": "info-stand:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "angular-electron-simple-app:build"
+            "browserTarget": "info-stand:build"
           }
         },
         "test": {
@@ -137,7 +143,7 @@
       }
     }
   },
-  "defaultProject": "angular-electron-simple-app",
+  "defaultProject": "info-stand",
   "schematics": {
     "@schematics/angular:component": {
       "prefix": "app",

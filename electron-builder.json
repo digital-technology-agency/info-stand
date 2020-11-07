@@ -1,5 +1,6 @@
 {
-  "productName": "angular-electron-simple-app",
+  "appId": "dta.info.stand",
+  "productName": "info-stand",
   "directories": {
     "output": "release/"
   },
@@ -20,21 +21,55 @@
     "!tslint.json"
   ],
   "win": {
-    "icon": "dist/assets/icons",
+    "icon": "dist/assets/logo.png",
+    "publish": [
+      "github"
+    ],
     "target": [
-      "portable"
+      "portable",
+      "nsis"
     ]
   },
   "mac": {
-    "icon": "dist/assets/icons",
+    "icon": "dist/assets/logo.png",
+    "publish": [
+      "github"
+    ],
     "target": [
-      "dmg"
+      "tar.gz"
     ]
   },
+  "nsis": {
+    "oneClick": false,
+    "perMachine": true,
+    "allowToChangeInstallationDirectory": true,
+    "artifactName": "${productName}-Installer-${version}.${ext}",
+    "uninstallDisplayName": "${productName}",
+    "deleteAppDataOnUninstall": true
+  },
+  "deb": {
+    "desktop": {
+      "Name": "Information stand",
+      "Type": "Application",
+      "GenericName": "Information stand"
+    }
+  },
   "linux": {
-    "icon": "dist/assets/icons",
+    "desktop": {
+      "Name": "Information stand",
+      "Type": "Application",
+      "GenericName": "Information stand"
+    },
+    "icon": "dist/assets/logo.png",
+    "publish": [
+      "github"
+    ],
     "target": [
-      "AppImage"
+      "AppImage",
+      "deb",
+      "freebsd",
+      "rpm",
+      "snap"
     ]
   }
 }
