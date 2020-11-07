@@ -1,10 +1,19 @@
-import { NgModule } from '@angular/core';
-import { Routes, RouterModule } from '@angular/router';
+import {NgModule} from '@angular/core';
+import {Routes, RouterModule} from '@angular/router';
+import {MainComponent} from './main/main.component';
 
-const routes: Routes = [];
+const routes: Routes = [
+    {
+        path: 'main',
+        component: MainComponent,
+    },
+    {path: '', redirectTo: 'main', pathMatch: 'full'},
+    {path: '**', redirectTo: 'main'},
+];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+    imports: [RouterModule.forRoot(routes)],
+    exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {
+}
