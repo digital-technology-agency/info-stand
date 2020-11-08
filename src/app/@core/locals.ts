@@ -1,19 +1,13 @@
 export class Local {
     static en() {
         return {
-            Comment: 'Comment',
-            Login: 'Login',
-            Site: 'Site',
-            Resource: 'Resource',
+            'Begin search': 'Begin search',
         }
     }
 
     static ru() {
         return {
-            Comment: 'Коментарий',
-            Login: 'Логин',
-            Site: 'Сайт',
-            Resource: 'Ресурс',
+            'Begin search': 'Начать поиск',
         }
     }
 }

@@ -30,6 +30,8 @@ import {ScrollingModule} from '@angular/cdk/scrolling';
 import {TranslateHttpLoader} from '@ngx-translate/http-loader';
 import {MainComponent} from './main/main.component';
 import {ThemeModule} from './@themes/theme.module';
+import {SearchViewComponent} from './search-view/search-view.component';
+import { SearchKeyboardComponent } from './search-keyboard/search-keyboard.component';
 
 const MATERIAL_MODULES = [
     MatDialogModule,
@@ -48,7 +50,7 @@ const MATERIAL_MODULES = [
     MatCheckboxModule,
     MatRadioModule,
 ];
-const ENTRY_COMPONENTS = [MainComponent];
+const ENTRY_COMPONENTS = [MainComponent, SearchViewComponent];
 
 export function HttpLoaderFactory(http: HttpClient) {
     return new TranslateHttpLoader(http);
@@ -58,6 +60,7 @@ export function HttpLoaderFactory(http: HttpClient) {
     declarations: [
         ...ENTRY_COMPONENTS,
         AppComponent,
+        SearchKeyboardComponent,
     ],
     imports: [
         BrowserModule,
