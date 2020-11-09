@@ -1,0 +1,33 @@
+@import '~@angular/material/theming';
+
+$mat-typography-config: mat-typography-config();
+$mat-keyboard-button-distance: 5px !default;
+$min-button-with: 100px !default;
+$min-button-height: 50px !default;
+$mat-keyboard-capslock-animation-duration: $backdrop-animation-duration !default;
+$mat-keyboard-capslock-animation-timing-function: $backdrop-animation-timing-function !default;
+$mat-keyboard-capslock-led: #4685ff !default;
+$mat-keyboard-capslock-shine: #adff2f !default;
+
+:host {
+  display: flex;
+  font: {
+    family: mat-font-family($mat-typography-config);
+    size: mat-font-size($mat-typography-config, button);
+  }
+  justify-content: space-between;
+  line-height: 20px;
+  margin-left: $mat-keyboard-button-distance;
+  margin-right: $mat-keyboard-button-distance;
+
+  button {
+    width: $min-button-with;
+    height: $min-button-height;
+    font-size: 30px;
+  }
+
+  .space-bar {
+    width: $min-button-with * 3;
+  }
+}
+

@@ -32,6 +32,7 @@ import {MainComponent} from './main/main.component';
 import {ThemeModule} from './@themes/theme.module';
 import {SearchViewComponent} from './search-view/search-view.component';
 import { SearchKeyboardComponent } from './search-keyboard/search-keyboard.component';
+import { KeyboardKeyComponent } from './search-keyboard/keyboard-key/keyboard-key.component';
 
 const MATERIAL_MODULES = [
     MatDialogModule,
@@ -61,6 +62,7 @@ export function HttpLoaderFactory(http: HttpClient) {
         ...ENTRY_COMPONENTS,
         AppComponent,
         SearchKeyboardComponent,
+        KeyboardKeyComponent,
     ],
     imports: [
         BrowserModule,
